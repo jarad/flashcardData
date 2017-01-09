@@ -19,28 +19,19 @@ flashcards <- read_dir(path = "flashcards",
               pattern = "*.csv",
               into = c("dir","ymd","extension")) %>%
   select(-dir, -ymd, -extension) %>%
-  na.omit() %>%
+#  na.omit() %>%
 
   mutate(date = as.Date(date),
 
-         card = tolower(card),
-         card = plyr::revalue(card, c(
-           "a" = "addition",
-           "add" = "addition",
-
-           "s" = "subtraction",
-           "sub" = "subtraction",
-
-           "m" = "multiplication",
-           "mult" = "multiplication",
-           "multi" = "multiplication",
-
-           "d" = "division")),
-
          minutes = as.numeric(substr(time, 1, 1)) +
-           ifelse(nchar(time)<4, 0, as.numeric(substr(time, 3, 4)) / 60)) %>%
+           ifelse(nchar(time)<4, 0, as.numeric(substr(time, 3, 4)) / 60),
 
-  select(-time)
+         card = tolower(card)) %>%
+
+  rename(synonym = card) %>%
+  left_join(readr::read_csv("card_synonyms.csv"), by="synonym") %>%
+
+  select(-time, -synonym)
 
 
 devtools::use_data(flashcards, overwrite = TRUE)
