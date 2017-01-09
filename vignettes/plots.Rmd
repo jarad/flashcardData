@@ -1,0 +1,20 @@
+---
+title: "Flashcard progress plots"
+author: "Jarad Niemi"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Flashcard progress plots}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r}
+library(ggplot2)
+
+ggplot(flashcardData::flashcards, aes(date,count)) + 
+  geom_point() +
+  facet_grid(card~student) + 
+  geom_smooth(method='lm',formula=y~x) + 
+  theme_bw()
+```
