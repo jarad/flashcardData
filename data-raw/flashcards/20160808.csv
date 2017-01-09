@@ -1,9 +1,9 @@
 date,student,card,time,count
 2016/8/8,avalon,multiplication,5:00,15
 2016/8/8,archer,addition,5:00,44
-2016/8/9,avalon,multiplication,,19
+2016/8/9,avalon,multiplication,5:00,19
 2016/8/9,archer,addition,5:00,33
-2016/8/15,avalon,multiplication,,13
+2016/8/15,avalon,multiplication,5:00,13
 2016/8/15,archer,addition,5:00,33
 2016/8/16,archer,addition,5:00,34
 2016/8/16,avalon,multiplication,5:00,21
