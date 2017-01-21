@@ -18,3 +18,16 @@ date,student,card,time,count
 2016/12/16,archer,S,5:00,50
 2016/12/16,avalon,Mult,5:00,99
 2017/1/8,archer,S,5:00,60
+2017/1/9,avalon,Div,5:00,37
+2017/1/9,archer,Sub,5:00,72
+2017/1/11,archer,Sub,5:00,66
+2017/1/11,avalon,Div,5:00,26
+2017/1/13,avalon,Div,5:00,27
+2017/1/13,archer,Sub,5:00,60
+2017/1/14,archer,Sub,5:00,74
+2017/1/15,archer,Sub,5:00,76
+2017/1/17,archer,Sub,5:00,86
+2017/1/18,archer,Add,5:00,69
+2017/1/18,avalon,Add,5:00,22
+2017/1/19,archer,Add,5:00,82
+2017/1/19,avalon,Add,5:00,62
