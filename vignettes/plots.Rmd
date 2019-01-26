@@ -10,11 +10,11 @@ vignette: >
 ---
 
 ```{r}
-library(ggplot2)
+library("ggplot2")
 
-ggplot(flashcardData::flashcards, aes(date,count)) + 
+ggplot(flashcardData::flashcards, aes(date,count/seconds)) + 
   geom_point() +
   facet_grid(card~student) + 
-  geom_smooth(method='lm',formula=y~x) + 
+  # geom_smooth(method='lm',formula=y~x) + 
   theme_bw()
 ```
